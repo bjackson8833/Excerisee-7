@@ -40,6 +40,7 @@ Partial Class Form1
         Me.lblSubD = New System.Windows.Forms.Label()
         Me.btnCalc = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.groupBox1.SuspendLayout()
         Me.grbCofee.SuspendLayout()
         Me.grpbSales.SuspendLayout()
@@ -230,11 +231,21 @@ Partial Class Form1
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(153, 189)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(168, 72)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "&Calculate"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(474, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.grpbSales)
@@ -270,4 +281,5 @@ Partial Class Form1
     Private WithEvents lblSubD As Label
     Private WithEvents btnCalc As Button
     Private WithEvents btnExit As Button
+    Private WithEvents Button1 As Button
 End Class
