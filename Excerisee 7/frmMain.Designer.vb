@@ -23,7 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
-        Me.radioButton4 = New System.Windows.Forms.RadioButton()
+        Me.radFilled = New System.Windows.Forms.RadioButton()
         Me.radChocolate = New System.Windows.Forms.RadioButton()
         Me.radSugar = New System.Windows.Forms.RadioButton()
         Me.radGlazed = New System.Windows.Forms.RadioButton()
@@ -47,7 +47,7 @@ Partial Class frmMain
         '
         'groupBox1
         '
-        Me.groupBox1.Controls.Add(Me.radioButton4)
+        Me.groupBox1.Controls.Add(Me.radFilled)
         Me.groupBox1.Controls.Add(Me.radChocolate)
         Me.groupBox1.Controls.Add(Me.radSugar)
         Me.groupBox1.Controls.Add(Me.radGlazed)
@@ -60,17 +60,17 @@ Partial Class frmMain
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Doughnut Choices"
         '
-        'radioButton4
+        'radFilled
         '
-        Me.radioButton4.AutoSize = True
-        Me.radioButton4.Location = New System.Drawing.Point(17, 165)
-        Me.radioButton4.Margin = New System.Windows.Forms.Padding(2)
-        Me.radioButton4.Name = "radioButton4"
-        Me.radioButton4.Size = New System.Drawing.Size(85, 17)
-        Me.radioButton4.TabIndex = 3
-        Me.radioButton4.TabStop = True
-        Me.radioButton4.Text = "&Filled ($1.50)"
-        Me.radioButton4.UseVisualStyleBackColor = True
+        Me.radFilled.AutoSize = True
+        Me.radFilled.Location = New System.Drawing.Point(17, 165)
+        Me.radFilled.Margin = New System.Windows.Forms.Padding(2)
+        Me.radFilled.Name = "radFilled"
+        Me.radFilled.Size = New System.Drawing.Size(85, 17)
+        Me.radFilled.TabIndex = 3
+        Me.radFilled.TabStop = True
+        Me.radFilled.Text = "&Filled ($1.50)"
+        Me.radFilled.UseVisualStyleBackColor = True
         '
         'radChocolate
         '
@@ -275,7 +275,7 @@ Partial Class frmMain
     End Sub
 
     Private WithEvents groupBox1 As GroupBox
-    Private WithEvents radioButton4 As RadioButton
+    Private WithEvents radFilled As RadioButton
     Private WithEvents radChocolate As RadioButton
     Private WithEvents radSugar As RadioButton
     Private WithEvents radGlazed As RadioButton
