@@ -6,56 +6,44 @@ Option Strict On
 Option Infer Off
 
 Public Class frmMain
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
+    Dim dblGlazed As Double
+    Dim dblSugar As Double
+    Dim dblChocolate As Double
+    Dim dblFilled As Double
+    Dim dblNone As Double
+    Dim dblRegular As Double
+    Dim dblCappuccino As Double
+    Dim dblSales As Double
 
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
-        Dim dblGlazed As Double
-        Dim dblSugar As Double
-        Dim dblChocolate As Double
-        Dim dblFilled As Double
-        Dim dblNone As Double
-        Dim dblRegular As Double
-        Dim dblCappuccino As Double
-        Dim dblSales As Double
 
 
-
-
-        dblCappuccino = 2.75
-        dblGlazed = 1.05
-        dblSugar = 1.05
-        dblChocolate = 1.25
-        dblFilled = 1.5
-        dblNone = 0
-        dblRegular = 1.5
-        dblSales = 0.06D
 
         If radGlazed.Checked And radNone.Checked = True Then
-            GetCostGN(dblGlazed, dblSales, dblNone)
+            GetCostGN(dblGlazed, dblNone, dblSales)
         ElseIf radGlazed.Checked And radRegular.Checked = True Then
-            GetCostGR(dblGlazed, dblSales, dblRegular)
+            GetCostGR(dblGlazed, dblRegular, dblSales)
         ElseIf radGlazed.Checked And radCap.Checked = True Then
-            GetCostGC(dblGlazed, dblSales, dblCappuccino)
+            GetCostGC(dblGlazed, dblCappuccino, dblSales)
         ElseIf radSugar.Checked And radNone.Checked = True Then
-            GetCostSN(dblSugar, dblSales, dblNone)
+            GetCostSN(dblSugar, dblNone, dblSales)
         ElseIf radSugar.Checked And radRegular.Checked = True Then
-            GetCostSR(dblSugar, dblSales, dblRegular)
+            GetCostSR(dblSugar, dblRegular, dblSales)
         ElseIf radSugar.Checked And radCap.Checked = True Then
-            GetCostSC(dblSugar, dblSales, dblCappuccino)
+            GetCostSC(dblSugar, dblCappuccino, dblSales)
         ElseIf radChocolate.Checked And radNone.Checked = True Then
-            GetCostCN(dblChocolate, dblSales, dblNone)
+            GetCostCN(dblChocolate, dblNone, dblSales)
         ElseIf radChocolate.Checked And radRegular.Checked = True Then
-            GetCostCR(dblChocolate, dblSales, dblRegular)
+            GetCostCR(dblChocolate, dblRegular, dblSales)
         ElseIf radChocolate.Checked And radCap.Checked = True Then
-            GetCostCC(dblChocolate, dblSales, dblCappuccino)
+            GetCostCC(dblChocolate, dblCappuccino, dblSales)
         ElseIf radFilled.Checked And radNone.Checked = True Then
-            GetCostFN(dblFilled, dblSales, dblNone)
+            GetCostFN(dblFilled, dblNone, dblSales)
         ElseIf radFilled.Checked And radRegular.Checked = True Then
-            GetCostFR(dblFilled, dblSales, dblRegular)
+            GetCostFR(dblFilled, dblRegular, dblSales)
         ElseIf radFilled.Checked And radCap.Checked = True Then
-            GetCostFC(dblFilled, dblSales, dblCappuccino)
+            GetCostFC(dblFilled, dblCappuccino, dblSales)
         End If
 
 
@@ -175,7 +163,9 @@ Public Class frmMain
         Dim dblTotal As Double
         Dim dblSub As Double
         Dim dblTax As Double
-
+        MsgBox(dblGlazed)
+        MsgBox(dblNone)
+        MsgBox(dblSales)
         dblSub = dblGlazed + dblNone
         dblTax = (dblGlazed + dblNone) * dblSales
         dblTotal = dblSub + dblTax
@@ -218,5 +208,17 @@ Public Class frmMain
 
     Private Sub radGlazed_CheckedChanged(sender As Object, e As EventArgs) Handles radGlazed.CheckedChanged
 
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        dblCappuccino = 2.75
+        dblGlazed = 1.05
+        dblSugar = 1.05
+        dblChocolate = 1.25
+        dblFilled = 1.5
+        dblNone = 0
+        dblRegular = 1.5
+        dblSales = 0.06
     End Sub
 End Class
