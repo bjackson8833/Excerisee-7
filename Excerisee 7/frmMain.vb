@@ -206,8 +206,10 @@ Public Class frmMain
         Me.Close()
     End Sub
 
-    Private Sub radGlazed_CheckedChanged(sender As Object, e As EventArgs) Handles radGlazed.CheckedChanged
-
+    Private Sub radGlazed_CheckedChanged(sender As Object, e As EventArgs) Handles radGlazed.CheckedChanged, radCap.CheckedChanged, radChocolate.CheckedChanged, radFilled.CheckedChanged, radGlazed.CheckedChanged, radNone.CheckedChanged, radRegular.CheckedChanged, radSugar.CheckedChanged
+        lblSales.Text = ""
+        lblTotal.Text = ""
+        lblSub.Text = ""
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
