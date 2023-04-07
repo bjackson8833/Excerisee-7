@@ -163,9 +163,7 @@ Public Class frmMain
         Dim dblTotal As Double
         Dim dblSub As Double
         Dim dblTax As Double
-        MsgBox(dblGlazed)
-        MsgBox(dblNone)
-        MsgBox(dblSales)
+
         dblSub = dblGlazed + dblNone
         dblTax = (dblGlazed + dblNone) * dblSales
         dblTotal = dblSub + dblTax
